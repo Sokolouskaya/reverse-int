@@ -1,3 +1,9 @@
 module.exports = function reverse(n) {
-    return Number(String(n).split('').reverse().join(''));
+    const numArr = String(n).split('');
+
+    if (numArr[0] === '-') numArr.shift();
+
+    const reversedStr = numArr.reverse().join('');
+
+    return +reversedStr;
 };
